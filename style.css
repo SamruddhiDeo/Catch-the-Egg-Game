@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+}
+body{
+    background-image: url(assets/bg1.jpg);
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    font-family: "Arvo", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
+.startGame{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.466);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+.startGameBtn{
+    background-color: #4FB7EA;
+    color: white;
+    border: 5px solid white;
+    padding: 20px 40px;
+    border-radius: 20px;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.scores{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    font-size: 22px;
+    position: relative;
+    z-index: 2;
+    font-weight: bold;
+}
+.right{
+    display: flex;
+    gap: 30px;
+}
+.basket{
+    width: 17vw;
+    position: absolute;
+    bottom: 0;
+    left: 0%;
+    /* z-index: 2; */
+}
+.egg{
+    width: 5vw;
+    position: absolute;
+    bottom: 100%;
+    /* top: -20%; */
+    /* left: 93vw; */
+    z-index: 2;
+    /* animation: fallAnimation 2s ease-in; */
+}
+.gameOver{
+    background-color: rgba(0, 0, 0, 0.47);
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    z-index: 3;
+}
+.gameOverBox{
+    background: linear-gradient(#A3DA63,#0F7F17);
+    border-radius: 20px;
+    padding: 35px 50px;
+    border: 4px solid #6ECA5C;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+.gameOverBox .gameOverScores{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 19px;
+    gap: 10px;
+}
+.playAgain{
+    background: linear-gradient(#8CB8E2,#3382CC);
+    color: white;
+    padding: 11px 45px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 25px;
+    border: 2px solid #1B5797;
+    cursor: pointer;
+}
+
+
+@keyframes fallAnimation {
+    from{
+        /* top : -20%; */
+        bottom: 100%;
+    }
+    to{
+        /* top: 75%; */
+        bottom: 0%;
+    }
+    
+}
+
+@media screen  and (max-width:450px) {
+    .scores {
+        padding: 20px 30px;
+        font-size: 18px;
+    }
+    .startGameBtn{
+        font-size: 25px;
+    }
+}
+
+@media screen  and (max-width:350px) {
+    .scores {
+        padding: 20px 20px;
+        font-size: 15px;
+    }
+}
